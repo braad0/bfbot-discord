@@ -5,7 +5,6 @@ from datetime import datetime
 import asyncio
 
 PAUSES = {
-    "23:35": 1,
     "10:00": 15,
     "12:00": 60,
     "14:30": 15,

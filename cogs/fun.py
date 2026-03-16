@@ -17,7 +17,7 @@ class Fun(commands.Cog):
         if channel is not None:
             await channel.send(f'Bienvenue {member.mention} !')
 
-    @app_commands.command(name="hello", description="Dit bonjour !")
+    @app_commands.command(name="hello", description="Dit bonjour !") 
     async def hello(self, interaction: discord.Interaction):
         if self._last_member is None or self._last_member.id != interaction.user.id:
             await interaction.response.send_message(f'Bonjour {interaction.user.name} !')

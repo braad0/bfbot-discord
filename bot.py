@@ -36,7 +36,7 @@ class Bot(commands.Bot):
 
 async def main():
     bot = Bot()
-    await bot.start(TOKEN)
+    await bot.start(TOKEN) 
 
 
 asyncio.run(main())
