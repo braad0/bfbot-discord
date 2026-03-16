@@ -10,7 +10,6 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")
 GUILD_ID = int(os.getenv("GUILD_ID"))
 
-
 class Bot(commands.Bot):
     def __init__(self):
         intents = discord.Intents.default()
@@ -30,6 +29,13 @@ class Bot(commands.Bot):
 
         guild = discord.Object(id=GUILD_ID)
         self.tree.clear_commands(guild=guild)
+        await self.load_extension("cogs.jooble_bot_cogs")
+        await self.load_extension("cogs.sandwich")
+        await self.load_extension("cogs.python_commands")
+        await self.load_extension("cogs.attendance")
+        await self.load_extension("cogs.quiz")
+
+        guild = discord.Object(id=GUILD_ID)
         self.tree.copy_global_to(guild=guild)
         await self.tree.sync(guild=guild)
         print("Slash commands synchronisees !")
@@ -40,7 +46,7 @@ class Bot(commands.Bot):
 
 async def main():
     bot = Bot()
-    await bot.start(TOKEN)
+    await bot.start(TOKEN) 
 
 
 asyncio.run(main())
