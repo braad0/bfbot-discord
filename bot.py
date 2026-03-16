@@ -24,6 +24,9 @@ class Bot(commands.Bot):
         await self.load_extension("cogs.fun")
         await self.load_extension("cogs.pause")
         await self.load_extension("cogs.jooble_bot_cogs")
+        await self.load_extension("cogs.sandwich")
+        await self.load_extension("cogs.python_commands")
+        await self.load_extension("cogs.attendance")
 
         guild = discord.Object(id=GUILD_ID)
         self.tree.copy_global_to(guild=guild)
