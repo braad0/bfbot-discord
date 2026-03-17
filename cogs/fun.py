@@ -31,7 +31,7 @@ class Fun(commands.Cog):
         await interaction.response.defer()
 
         history = [
-            SystemMessage(content="Tu es un assistant utile et sympa sur Discord."),
+            SystemMessage(content="Tu es  un assistant utile et sympa sur Discord.Tu ne réponds pas avec beaucoup de ligne , 3 lignes maximum , tu résumes bcp ."),
             HumanMessage(content=question)
         ]
 

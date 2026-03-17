@@ -426,7 +426,7 @@ class Calendrier(commands.Cog):
                     day, month = map(int, valeur[4:].split("/"))
                     date = datetime(today.year, month, day).date()
                 except ValueError:
-                    await interaction.followup.send("Format invalide. Utilise sem:JJ/MM (ex: sem:23/03)")
+                    await interaction.followup.send("Format invalide. Utilise sem:JJ/MM  (ex: sem:23/03)")
                     return
                 buffer = generate_week_image(date, self.planning)
                 filename = f"semaine_{date}.png"
@@ -496,3 +496,7 @@ class Calendrier(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(Calendrier(bot))
+
+
+
+#
